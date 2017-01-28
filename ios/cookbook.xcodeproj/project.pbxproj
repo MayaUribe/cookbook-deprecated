@@ -7,36 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
-		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
-		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
-		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
-		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00C302E51ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* cookbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cookbookTests.m */; };
-		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
-		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
-		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		133E29F31AD74F7200F7D852 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		6C3A179C1E3C0C0C0088B590 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A179B1E3C0C0C0088B590 /* MapKit.framework */; };
-		6C3A179E1E3C0C140088B590 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A179D1E3C0C140088B590 /* ImageIO.framework */; };
-		6C3A179F1E3C0C1A0088B590 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A179B1E3C0C0C0088B590 /* MapKit.framework */; };
-		6C3A17A01E3C0C200088B590 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A179D1E3C0C140088B590 /* ImageIO.framework */; };
-		6C58F5721E3C16550099AE4D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C58F5711E3C16550099AE4D /* FBSDKCoreKit.framework */; };
-		6C58F58D1E3C165C0099AE4D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C58F58C1E3C165C0099AE4D /* FBSDKLoginKit.framework */; };
-		6C58F58F1E3C16880099AE4D /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C58F58E1E3C16880099AE4D /* GoogleToolboxForMac.framework */; };
-		6C6E72661E3C0F3B00BFD78E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6E72651E3C0F3B00BFD78E /* Bolts.framework */; };
-		6C6E72801E3C0F4400BFD78E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6E72651E3C0F3B00BFD78E /* Bolts.framework */; };
+		140ED2AC1D01E1AD002B40FF /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		146834051AC3E58100842450 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		5E9157361DD0AC6A00FF2AA8 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6CF84A671E37ED8B0037302B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CF84A661E37ED8B0037302B /* GoogleService-Info.plist */; };
 		6CF84A681E37ED8B0037302B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CF84A661E37ED8B0037302B /* GoogleService-Info.plist */; };
-		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		F737B7A21E278E431E664534 /* Pods_cookbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB6408E63B853658C06C443 /* Pods_cookbookTests.framework */; };
-		FEEBEFFE4BCE5042E6E856DE /* Pods_cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268A43B0C33B45E667CF6602 /* Pods_cookbook.framework */; };
+		832341BD1AAA6AB300B99B32 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8C3ADB44C9720C2E28BEFE05 /* Pods_cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6293775D5301B2C1F71EE8E /* Pods_cookbook.framework */; };
+		EBEAE6BB133360F572AC99E1 /* libPods-cookbookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A424010E2A8B7C1099F051C /* libPods-cookbookTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,17 +235,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cookbook/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cookbook/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		268A43B0C33B45E667CF6602 /* Pods_cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD0DCF8664CBB48B0130DC7 /* Pods-cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cookbook/Pods-cookbook.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6A424010E2A8B7C1099F051C /* libPods-cookbookTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cookbookTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3A177F1E3C0B310088B590 /* libBolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBolts.a; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/Bolts/libBolts.a"; sourceTree = "<group>"; };
 		6C3A179B1E3C0C0C0088B590 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6C3A179D1E3C0C140088B590 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6C58F5711E3C16550099AE4D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		6C58F58C1E3C165C0099AE4D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		6C58F58E1E3C16880099AE4D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
+		6C58F5E01E3C1E680099AE4D /* BFAppLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BFAppLink.h; path = Pods/Bolts/Bolts/iOS/BFAppLink.h; sourceTree = "<group>"; };
 		6C6E72651E3C0F3B00BFD78E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		6C7B74131E37E56800584439 /* libPods-cookbookTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-cookbookTests.a"; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/libPods-cookbookTests.a"; sourceTree = "<group>"; };
+		6C9991D71E3C263400389194 /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKCoreKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/libFBSDKCoreKit.a"; sourceTree = "<group>"; };
 		6CB9D0741E3C095400AF30C4 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "../../../../Library/Developer/Xcode/DerivedData/cookbook-ehaosyajyjgxbybfigvscljwrkdh/Build/Products/Debug-iphonesimulator/SDWebImage/libSDWebImage.a"; sourceTree = "<group>"; };
 		6CF84A661E37ED8B0037302B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		785B8D167F1FF58A95978818 /* Pods-cookbookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookbookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cookbookTests/Pods-cookbookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,7 +255,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9344F54CF8F5E0E8162D239B /* Pods-cookbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cookbookTests/Pods-cookbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC3CD901390F52D7C2D1738 /* Pods-cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-cookbook/Pods-cookbook.release.xcconfig"; sourceTree = "<group>"; };
-		BFB6408E63B853658C06C443 /* Pods_cookbookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookbookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6293775D5301B2C1F71EE8E /* Pods_cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,11 +263,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6E72661E3C0F3B00BFD78E /* Bolts.framework in Frameworks */,
-				6C3A17A01E3C0C200088B590 /* ImageIO.framework in Frameworks */,
-				6C3A179F1E3C0C1A0088B590 /* MapKit.framework in Frameworks */,
-				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				F737B7A21E278E431E664534 /* Pods_cookbookTests.framework in Frameworks */,
+				140ED2AC1D01E1AD002B40FF /* ReferenceProxy in Frameworks */,
+				EBEAE6BB133360F572AC99E1 /* libPods-cookbookTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,24 +272,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C58F58F1E3C16880099AE4D /* GoogleToolboxForMac.framework in Frameworks */,
-				6C58F58D1E3C165C0099AE4D /* FBSDKLoginKit.framework in Frameworks */,
-				6C58F5721E3C16550099AE4D /* FBSDKCoreKit.framework in Frameworks */,
-				6C6E72801E3C0F4400BFD78E /* Bolts.framework in Frameworks */,
-				6C3A179E1E3C0C140088B590 /* ImageIO.framework in Frameworks */,
-				6C3A179C1E3C0C0C0088B590 /* MapKit.framework in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
-				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
-				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
-				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
-				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
-				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
-				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				FEEBEFFE4BCE5042E6E856DE /* Pods_cookbook.framework in Frameworks */,
+				5E9157361DD0AC6A00FF2AA8 /* ReferenceProxy in Frameworks */,
+				146834051AC3E58100842450 /* ReferenceProxy in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */,
+				133E29F31AD74F7200F7D852 /* ReferenceProxy in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */,
+				139105C61AF99C1200B5F7CC /* ReferenceProxy in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* ReferenceProxy in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* ReferenceProxy in Frameworks */,
+				139FDEF61B0652A700C62182 /* ReferenceProxy in Frameworks */,
+				8C3ADB44C9720C2E28BEFE05 /* Pods_cookbook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +479,8 @@
 		95FE2F569D29398E7A24C0F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C9991D71E3C263400389194 /* libFBSDKCoreKit.a */,
+				6C58F5E01E3C1E680099AE4D /* BFAppLink.h */,
 				6C58F58E1E3C16880099AE4D /* GoogleToolboxForMac.framework */,
 				6C58F58C1E3C165C0099AE4D /* FBSDKLoginKit.framework */,
 				6C58F5711E3C16550099AE4D /* FBSDKCoreKit.framework */,
@@ -504,8 +490,8 @@
 				6C3A177F1E3C0B310088B590 /* libBolts.a */,
 				6CB9D0741E3C095400AF30C4 /* libSDWebImage.a */,
 				6C7B74131E37E56800584439 /* libPods-cookbookTests.a */,
-				268A43B0C33B45E667CF6602 /* Pods_cookbook.framework */,
-				BFB6408E63B853658C06C443 /* Pods_cookbookTests.framework */,
+				6A424010E2A8B7C1099F051C /* libPods-cookbookTests.a */,
+				C6293775D5301B2C1F71EE8E /* Pods_cookbook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -561,7 +547,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -990,6 +976,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9344F54CF8F5E0E8162D239B /* Pods-cookbookTests.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+					armv7,
+					armv7s,
+					arm64,
+				);
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = TT3A998JX5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -999,6 +993,8 @@
 				INFOPLIST_FILE = cookbookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cookbook.app/cookbook";
 			};
@@ -1008,12 +1004,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785B8D167F1FF58A95978818 /* Pods-cookbookTests.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+					armv7,
+					armv7s,
+					arm64,
+				);
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = TT3A998JX5;
 				INFOPLIST_FILE = cookbookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cookbook.app/cookbook";
 			};
@@ -1023,13 +1029,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BD0DCF8664CBB48B0130DC7 /* Pods-cookbook.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+					armv7,
+					armv7s,
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = TT3A998JX5;
 				INFOPLIST_FILE = cookbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1045,11 +1059,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEC3CD901390F52D7C2D1738 /* Pods-cookbook.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+					armv7,
+					armv7s,
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TT3A998JX5;
 				INFOPLIST_FILE = cookbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1074,15 +1097,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1098,7 +1125,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1116,8 +1143,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1125,6 +1154,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1133,7 +1163,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-lc++";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
