@@ -11,13 +11,13 @@ import Recipes from './screens/recipes';
 import {
   LOGIN,
   RECIPES
-} from './share/constant';
+} from './shared/constant';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {screen: RECIPES};
     this.appStorage = new AppStorage();
     this.renderScene = this.renderScene.bind(this);
     this._checkInitialScreen();
@@ -25,7 +25,7 @@ class App extends Component {
 
   _checkInitialScreen() {
     console.log('Check initial screen');
-    this.setState({screen: RECIPES});
+    // this.setState({screen: RECIPES});
   }
 
   renderScene(route, navigator) {
@@ -67,7 +67,7 @@ class App extends Component {
         </View>
       );
     } else {
-      content = (<View style={global.content}>
+      content = (<View style={{flex: 1, backgroundColor: '#262a2e'}}>
                   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                     <Text style={{fontFamily: 'OpenSans', fontSize: 20, color: '#FFF'}}>Loading...</Text>
                     <Text style={{fontFamily: 'OpenSans', fontSize: 20, color: '#FFF'}}>Please wait</Text>
