@@ -174,5 +174,8 @@
     <orderEntry type="library" exported="" name="okhttp-3.4.1" level="project" />
     <orderEntry type="library" exported="" name="react-native-0.40.0" level="project" />
     <orderEntry type="library" exported="" name="imagepipeline-okhttp3-0.11.0" level="project" />
+    <orderEntry type="module" module-name="react-native-vector-icons" exported="" />
+    <orderEntry type="library" exported="" name="support-v4-23.2.1" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-23.2.1" level="project" />
   </component>
 </module>
