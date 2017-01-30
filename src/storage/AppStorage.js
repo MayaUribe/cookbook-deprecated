@@ -10,9 +10,9 @@ const DB = {
 
 class AppStorage {
 
-  addUserData(cookie, username) {
+  addUserData(username) {
     return new Promise((resolve, reject) => {
-      DB.users.add({key: USER_DATA_KEY, app_cookie: cookie, username: username}, function(addedData) {
+      DB.users.add({key: USER_DATA_KEY, username: username}, function(addedData) {
         resolve(addedData);
       });
     });
@@ -42,7 +42,6 @@ class AppStorage {
 
   clearUserData() {
     return new Promise((resolve, reject) => {
-      console.log('remove user');
       DB.users.remove({ key: USER_DATA_KEY }, (data) => {
         DB.users.add({key: USER_DATA_KEY});
         resolve(data);

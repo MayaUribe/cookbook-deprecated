@@ -3,29 +3,47 @@
  * https://github.com/jhabdas/react-native-webpack-starter-kit
  */
 import React, {Component} from 'react';
-import { StatusBar, Navigator, View, Text, Platform } from 'react-native';
-import AppStorage from './storage/AppStorage';
+import {
+  StatusBar,
+  Navigator,
+  View,
+  Text,
+  Image,
+  Dimensions,
+  StyleSheet
+} from 'react-native';
 import Login from './screens/login';
 import Recipes from './screens/recipes';
+import Storage from './modules/storage';
 
 import {
   LOGIN,
-  RECIPES
+  RECIPES,
+  APP_NAME,
+  LOADING
 } from './shared/constant';
+
+var deviceWidth = Dimensions.get('window').width;
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {screen: RECIPES};
-    this.appStorage = new AppStorage();
+
+    this.state = {};
     this.renderScene = this.renderScene.bind(this);
+    // Storage.clearAllData();
     this._checkInitialScreen();
   }
 
   _checkInitialScreen() {
-    console.log('Check initial screen');
-    // this.setState({screen: RECIPES});
+    Storage.getUserData().then((userData) => {
+      if (userData) {
+        this.setState({screen: RECIPES});
+      } else {
+        this.setState({screen: LOGIN});
+      }
+    });
   }
 
   renderScene(route, navigator) {
@@ -48,36 +66,65 @@ class App extends Component {
   onMenuItemSelected(item) {
     switch (item) {
       case 'Logout':
-        this.appStorage.clearAllData();
+        Storage.clearAllData();
         break;
     }
   }
 
   render() {
     let content;
-    let bgColor = (Platform.OS === 'ios' ? 'white' : '#262a2e');
 
     if (this.state.screen) {
       content = (
         <View style={{ flex: 1 }}>
-          <StatusBar backgroundColor={bgColor} barStyle="light-content" />
+          <StatusBar backgroundColor="#262a2e" barStyle="dark-content" />
           <Navigator style={{ flex: 1 }}
                      initialRoute={{ name: this.state.screen }}
                      renderScene={this.renderScene.bind(this)} />
         </View>
       );
     } else {
-      content = (<View style={{flex: 1, backgroundColor: '#262a2e'}}>
-                  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontFamily: 'OpenSans', fontSize: 20, color: '#FFF'}}>Loading...</Text>
-                    <Text style={{fontFamily: 'OpenSans', fontSize: 20, color: '#FFF'}}>Please wait</Text>
-                  </View>
-                </View>);
+      content = (<View style={styles.container}>
+                   <View style={styles.content}>
+                     <Image source={require('./assets/img/cook_book_512_2.png')}
+                            style={styles.logo} />
+                     <Text style={styles.appText}>{APP_NAME}</Text>
+                     <Text style={styles.loadingText}>{LOADING}</Text>
+                   </View>
+                 </View>);
     }
     return (
       content
     );
   }
 }
+
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#8E6C88'
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  logo: {
+    resizeMode: 'contain',
+    width: deviceWidth / 2,
+    height: deviceWidth / 2
+  },
+  appText: {
+    fontFamily: 'OpenSans',
+    fontSize: 24,
+    color: '#FFF',
+    marginTop: 15
+  },
+  loadingText: {
+    fontFamily: 'OpenSans',
+    fontSize: 16,
+    color: '#FFF'
+  }
+});
 
 export default App;

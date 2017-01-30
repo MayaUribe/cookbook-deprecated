@@ -27,6 +27,7 @@ DerivedData
 
 #Node
 node_modules/
+npm-debug.log
 cookbook/.idea/.name
 cookbook/.idea/cookbook.iml
 cookbook/.idea/misc.xml
@@ -34,3 +35,10 @@ cookbook/.idea/modules.xml
 cookbook/.idea/vcs.xml
 cookbook/.idea/workspace.xml
 cookbook/android/app/app.iml
+
+# Android/IJ
+#
+*.iml
+.idea
+.gradle
+local.properties
