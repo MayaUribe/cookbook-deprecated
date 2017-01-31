@@ -23,5 +23,3 @@ target 'cookbookTests' do
   # pod 'FirebaseUI/Google', '~> 2.0'
 
 end
-
-

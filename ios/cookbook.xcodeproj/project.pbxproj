@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -25,6 +26,7 @@
 		44671726ACC642A949C5D35A /* libPods-cookbookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361B1EB92E48BFC4ACC3F88 /* libPods-cookbookTests.a */; };
 		57FBBB1A4C08485387AF8D77 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EA27DA29969426E85E8A35C /* Entypo.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6C4CA4F11E40E5EE00D7823D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE81EEF92DD48618C458A32 /* libz.tbd */; };
 		6C4FF2B61E3C351D005029D3 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C4FF2AC1E3C351D005029D3 /* OpenSans-Bold.ttf */; };
 		6C4FF2B71E3C351D005029D3 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C4FF2AC1E3C351D005029D3 /* OpenSans-Bold.ttf */; };
 		6C4FF2B81E3C351D005029D3 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C4FF2AD1E3C351D005029D3 /* OpenSans-BoldItalic.ttf */; };
@@ -258,20 +260,6 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
-		6C6599001E3FEB61009385B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E391001C8BF849DAB91B3F73 /* RNGoogleSignin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9FD355121D3E4A2900D06170;
-			remoteInfo = RNGoogleSignin;
-		};
-		6CD2AC9B1E400EF50056C21A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBD9B99916FD45A4A0D4D941 /* RCTFBLogin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F3A6B5B1ACFBCC500CA65F7;
-			remoteInfo = RCTFBLogin;
-		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -352,8 +340,6 @@
 		BB4B2E82F34248FD8851D98C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		BEC3CD901390F52D7C2D1738 /* Pods-cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-cookbook/Pods-cookbook.release.xcconfig"; sourceTree = "<group>"; };
 		C6293775D5301B2C1F71EE8E /* Pods_cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBD9B99916FD45A4A0D4D941 /* RCTFBLogin.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBLogin.xcodeproj; path = "../node_modules/react-native-facebook-login/RCTFBLogin.xcodeproj"; sourceTree = "<group>"; };
-		E391001C8BF849DAB91B3F73 /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGoogleSignin.xcodeproj; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; };
 		EA8893547C2B40918F0AD388 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		EDAD0F7101F149BBBB9B2AA3 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		F09D8688713747928CBB9327 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -366,11 +352,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
 				6C81915E1E3FFDBD00207EEF /* libz.tbd in Frameworks */,
-				6C81915D1E3FFDB100207EEF /* AddressBook.framework in Frameworks */,
 				6C81915C1E3FFDA700207EEF /* SystemConfiguration.framework in Frameworks */,
 				6C81915B1E3FFDA100207EEF /* SafariServices.framework in Frameworks */,
-				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				6C81915D1E3FFDB100207EEF /* AddressBook.framework in Frameworks */,
 				44671726ACC642A949C5D35A /* libPods-cookbookTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,9 +367,10 @@
 			files = (
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
-				878E19CD04484CE49D7D6622 /* SafariServices.framework in Frameworks */,
-				C0F521CBE1CC446FB4DFA8A4 /* SystemConfiguration.framework in Frameworks */,
 				9CEB6C2BE6E441CE868C56A1 /* AddressBook.framework in Frameworks */,
+				C0F521CBE1CC446FB4DFA8A4 /* SystemConfiguration.framework in Frameworks */,
+				878E19CD04484CE49D7D6622 /* SafariServices.framework in Frameworks */,
+				6C4CA4F11E40E5EE00D7823D /* libz.tbd in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -550,22 +537,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C6598E41E3FEB61009385B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C6599011E3FEB61009385B1 /* libRNGoogleSignin.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6CD2AC951E400EF50056C21A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CD2AC9C1E400EF50056C21A /* libRCTFBLogin.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,8 +572,6 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				B151681B029A48AD9675F4B7 /* RNVectorIcons.xcodeproj */,
-				E391001C8BF849DAB91B3F73 /* RNGoogleSignin.xcodeproj */,
-				CBD9B99916FD45A4A0D4D941 /* RCTFBLogin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -761,10 +730,6 @@
 					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
 				},
 				{
-					ProductGroup = 6CD2AC951E400EF50056C21A /* Products */;
-					ProjectRef = CBD9B99916FD45A4A0D4D941 /* RCTFBLogin.xcodeproj */;
-				},
-				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -799,10 +764,6 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-				},
-				{
-					ProductGroup = 6C6598E41E3FEB61009385B1 /* Products */;
-					ProjectRef = E391001C8BF849DAB91B3F73 /* RNGoogleSignin.xcodeproj */;
 				},
 				{
 					ProductGroup = 6C4FF2D51E3CE798005029D3 /* Products */;
@@ -984,20 +945,6 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = 6C4FF2F11E3CE798005029D3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C6599011E3FEB61009385B1 /* libRNGoogleSignin.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNGoogleSignin.a;
-			remoteRef = 6C6599001E3FEB61009385B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CD2AC9C1E400EF50056C21A /* libRCTFBLogin.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTFBLogin.a;
-			remoteRef = 6CD2AC9B1E400EF50056C21A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
@@ -1277,6 +1224,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BD0DCF8664CBB48B0130DC7 /* Pods-cookbook.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1303,6 +1251,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEC3CD901390F52D7C2D1738 /* Pods-cookbook.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TT3A998JX5;
