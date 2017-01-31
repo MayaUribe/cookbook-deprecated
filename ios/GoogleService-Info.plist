@@ -36,5 +36,27 @@
 	<string>1:384642986962:ios:022cc1b48c9bb1b5</string>
 	<key>DATABASE_URL</key>
 	<string>https://cookbook-b0d4f.firebaseio.com</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb181779138973219</string>
+      </array>
+    </dict>
+  </array>
+  <key>FacebookAppID</key>
+  <string>181779138973219</string>
+  <key>FacebookDisplayName</key>
+  <string>Cookbook</string>
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>fbapi</string>
+    <string>fb-messenger-api</string>
+    <string>fbauth2</string>
+    <string>fbshareextension</string>
+  </array>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>Enable photo access to upload for recipes images</string>
 </dict>
 </plist>

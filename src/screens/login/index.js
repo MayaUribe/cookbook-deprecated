@@ -46,7 +46,7 @@ class Login extends Component {
       <View style={styles.container}>
         <View style={styles.containers}>
           <View style={styles.titleContainer}>
-            <Image source={require('../../assets/img/cook_book_128_2.png')}
+            <Image source={require('../../assets/img/cookbook_128.png')}
                    style={styles.logo} />
             <Text style={styles.title}>{APP_NAME}</Text>
           </View>

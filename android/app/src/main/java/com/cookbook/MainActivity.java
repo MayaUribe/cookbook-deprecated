@@ -1,6 +1,8 @@
 package com.cookbook;
 
 import com.facebook.react.ReactActivity;
+import com.magus.fblogin.FacebookLoginPackage;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainActivity extends ReactActivity {

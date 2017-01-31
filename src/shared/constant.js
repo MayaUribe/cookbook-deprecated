@@ -1,7 +1,11 @@
 module.exports = {
-  // API_HOST: 'https://sms.sferastudios.com/webservice/',
+  // API_HOST: 'https://some.example.com/webservice/',
+  // General
   APP_NAME: 'My Cookbook',
   LOADING: 'Loading...',
   LOGIN: 'Login',
-  RECIPES: 'Recipes'
+
+  // Recipes
+  RECIPES: 'Recipes',
+  MY_RECIPES: 'My Recipes'
 };

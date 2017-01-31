@@ -77,7 +77,7 @@ class App extends Component {
     if (this.state.screen) {
       content = (
         <View style={{ flex: 1 }}>
-          <StatusBar backgroundColor="#262a2e" barStyle="dark-content" />
+          <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
           <Navigator style={{ flex: 1 }}
                      initialRoute={{ name: this.state.screen }}
                      renderScene={this.renderScene.bind(this)} />
@@ -86,7 +86,7 @@ class App extends Component {
     } else {
       content = (<View style={styles.container}>
                    <View style={styles.content}>
-                     <Image source={require('./assets/img/cook_book_512_2.png')}
+                     <Image source={require('./assets/img/cookbook_512.png')}
                             style={styles.logo} />
                      <Text style={styles.appText}>{APP_NAME}</Text>
                      <Text style={styles.loadingText}>{LOADING}</Text>
