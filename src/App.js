@@ -12,15 +12,20 @@ import {
   Dimensions,
   StyleSheet
 } from 'react-native';
+
+import * as firebase from 'firebase';
 import Login from './screens/login';
 import Recipes from './screens/recipes';
-import Storage from './modules/storage';
+import Home from './screens/recipes/home';
+import Firebase from './modules/firebase/firebase';
 
 import {
   LOGIN,
+  LOGOUT,
   RECIPES,
   APP_NAME,
-  LOADING
+  LOADING,
+  HOME
 } from './shared/constant';
 
 var deviceWidth = Dimensions.get('window').width;
@@ -30,24 +35,33 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    Firebase.initialise();
+    this.getInitialView();
+    this.navigator = null;
+
+    this.state = {
+      userLoaded: false,
+      initialView: null
+    };
+
     this.renderScene = this.renderScene.bind(this);
-    // Storage.clearAllData();
-    this._checkInitialScreen();
+    this.getInitialView = this.getInitialView.bind(this);
   }
 
-  _checkInitialScreen() {
-    Storage.getUserData().then((userData) => {
-      if (userData) {
-        this.setState({screen: RECIPES});
-      } else {
-        this.setState({screen: LOGIN});
-      }
+  getInitialView() {
+    firebase.auth().onAuthStateChanged((user) => {
+      let initialView = user ? RECIPES : LOGIN;
+
+      this.setState({
+        userLoaded: true,
+        initialView: initialView
+      });
     });
   }
 
   renderScene(route, navigator) {
     let ScreenComponent = null;
+    this.navigator = navigator;
 
     switch (route.name) {
       case LOGIN:
@@ -56,6 +70,9 @@ class App extends Component {
       case RECIPES:
         ScreenComponent = Recipes;
         break;
+      case HOME:
+        ScreenComponent = Home;
+        break;
     }
 
     if (ScreenComponent) {
@@ -63,10 +80,23 @@ class App extends Component {
     }
   }
 
+  async logout() {
+    try {
+      await firebase.auth().signOut();
+
+      // Navigate to login view
+      this.navigator.push({
+        name: LOGIN
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   onMenuItemSelected(item) {
     switch (item) {
-      case 'Logout':
-        Storage.clearAllData();
+      case LOGOUT:
+        this.logout();
         break;
     }
   }
@@ -74,12 +104,12 @@ class App extends Component {
   render() {
     let content;
 
-    if (this.state.screen) {
+    if (this.state.initialView) {
       content = (
         <View style={{ flex: 1 }}>
           <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
           <Navigator style={{ flex: 1 }}
-                     initialRoute={{ name: this.state.screen }}
+                     initialRoute={{ name: this.state.initialView }}
                      renderScene={this.renderScene.bind(this)} />
         </View>
       );

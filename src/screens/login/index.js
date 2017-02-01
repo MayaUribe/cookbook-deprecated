@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import { Text, View, StyleSheet, TextInput, TouchableHighlight, Image, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Constant from './constants';
-import Storage from '../../modules/storage';
+import * as firebase from 'firebase';
 
 import {
   APP_NAME,
@@ -19,6 +19,33 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.inputedUsername = '';
+    this.inputedPassword = '';
+  }
+
+  async signup(email, pass) {
+    try {
+      await firebase.auth()
+        .createUserWithEmailAndPassword(email, pass);
+
+      console.log('Account created');
+      // Navigate to the Home page, the user is auto logged in
+      // this._navigate(email);
+    } catch (error) {
+      console.log(error.toString());
+    }
+  }
+
+  async login(email, pass) {
+    try {
+      await firebase.auth()
+        .signInWithEmailAndPassword(email, pass);
+
+      console.log('Logged In!');
+      // Navigate to the Home page
+      this._navigate(email);
+    } catch (error) {
+      console.log(error.toString());
+    }
   }
 
   _navigate(name) {
@@ -31,14 +58,8 @@ class Login extends Component {
   }
 
   onLoginPressed() {
-    Storage.addUserData(this.inputedUsername)
-    .then((addedData) => {
-      if (addedData) {
-        this._navigate(addedData);
-      } else {
-        throw new Error('Unexpected error please try again');
-      }
-    });
+    // this.signup('test@test.com', 'usertest');
+    this.login(this.inputedUsername, this.inputedPassword);
   }
 
   render() {
@@ -84,6 +105,7 @@ class Login extends Component {
                   underlineColorAndroid={'rgba(0,0,0,0.0)'}
                   placeholderTextColor="#2B2E33"
                   secureTextEntry
+                  onChangeText={(text) => { this.inputedPassword = text; }}
                 />
               </View>
               <TouchableHighlight

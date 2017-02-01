@@ -4,8 +4,10 @@ module.exports = {
   APP_NAME: 'My Cookbook',
   LOADING: 'Loading...',
   LOGIN: 'Login',
+  LOGOUT: 'Logout',
 
   // Recipes
   RECIPES: 'Recipes',
-  MY_RECIPES: 'My Recipes'
+  MY_RECIPES: 'My Recipes',
+  HOME: 'Home'
 };

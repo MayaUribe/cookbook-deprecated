@@ -38,7 +38,8 @@ class Recipes extends Component {
     this.setState({isOpen: !this.state.isOpen});
   }
 
-  onMenuItemSelected() {
+  onMenuItemSelected(item) {
+    this.props.onMenuItemSelected(item);
     this.updateMenu(false);
   }
 
