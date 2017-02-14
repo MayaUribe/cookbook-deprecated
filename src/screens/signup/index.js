@@ -5,22 +5,24 @@ import { Text, View, StyleSheet, TextInput, TouchableHighlight, Image, Dimension
 import Icon from 'react-native-vector-icons/Ionicons';
 import Constant from './constants';
 import * as firebase from 'firebase';
+import Database from '../../modules/firebase/database';
 
 import {
-  APP_NAME,
-  LOGIN,
   RECIPES,
   SIGNUP
 } from '../../shared/constant';
 
 var deviceWidth = Dimensions.get('window').width;
 
-class Login extends Component {
+class Signup extends Component {
 
   constructor(props) {
     super(props);
     this.inputedEmail = '';
     this.inputedPassword = '';
+    this.confirmedPassword = '';
+    this.inputedName = '';
+    this.inputedLastname = '';
   }
 
   _navigate(screen) {
@@ -29,23 +31,32 @@ class Login extends Component {
     });
   }
 
-  async login(email, pass) {
+  async signup() {
     try {
       await firebase.auth()
-        .signInWithEmailAndPassword(email, pass);
-
+        .createUserWithEmailAndPassword(this.inputedEmail, this.inputedPassword);
+      // @Todo: send email to registered user
+      // @Todo: Maybe a welcome message with a quick introduction
+      // @Todo: Add a loading when saving the data
+      let user = await firebase.auth().currentUser;
+      Database.setUserName(user.uid, this.inputedName, this.inputedLastname);
       this._navigate(RECIPES);
     } catch (error) {
       console.log(error.toString());
     }
   }
 
-  onLoginPressed() {
-    this.login(this.inputedEmail, this.inputedPassword);
-  }
-
   onSignupPressed() {
-    this._navigate(SIGNUP);
+    // this.signup('test@test.com', 'usertest');
+    if (this.inputedEmail === '' || this.inputedPassword === '' ||
+        this.confirmedPassword === '' || this.inputedName === '' ||
+        this.inputedLastname === '') {
+      console.log('Please enter all fields');
+    } else if (this.inputedPassword !== this.confirmedPassword) {
+      console.log('Passwords must match');
+    } else {
+      this.signup();
+    }
   }
 
   render() {
@@ -53,15 +64,13 @@ class Login extends Component {
       <View style={styles.container}>
         <View style={styles.containers}>
           <View style={styles.titleContainer}>
-            <Image source={require('../../assets/img/cookbook_128.png')}
-                   style={styles.logo} />
-            <Text style={styles.title}>{APP_NAME}</Text>
+            <Text style={styles.title}>Create an account</Text>
           </View>
           <View style={styles.inputsContainer}>
             <View>
               <View style={styles.inputContainer}>
                 <Icon
-                  name="ios-person"
+                  name="ios-mail"
                   size={Constant.ICON_SIZE}
                   color="#2B2E33"
                 />
@@ -74,6 +83,40 @@ class Login extends Component {
                   underlineColorAndroid={'rgba(0,0,0,0.0)'}
                   placeholderTextColor="#2B2E33"
                   onChangeText={(text) => { this.inputedEmail = text; }}
+                />
+              </View>
+              <View style={styles.inputContainer}>
+                <Icon
+                  name="ios-person"
+                  size={Constant.ICON_SIZE}
+                  color="#2B2E33"
+                />
+                <TextInput
+                  style={styles.input}
+                  ref='name'
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  placeholder='Name'
+                  underlineColorAndroid={'rgba(0,0,0,0.0)'}
+                  placeholderTextColor="#2B2E33"
+                  onChangeText={(text) => { this.inputedName = text; }}
+                />
+              </View>
+              <View style={styles.inputContainer}>
+                <Icon
+                  name="ios-person"
+                  size={Constant.ICON_SIZE}
+                  color="#2B2E33"
+                />
+                <TextInput
+                  style={styles.input}
+                  ref='lastname'
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  placeholder='Lastname'
+                  underlineColorAndroid={'rgba(0,0,0,0.0)'}
+                  placeholderTextColor="#2B2E33"
+                  onChangeText={(text) => { this.inputedLastname = text; }}
                 />
               </View>
               <View style={styles.inputContainer}>
@@ -94,18 +137,30 @@ class Login extends Component {
                   onChangeText={(text) => { this.inputedPassword = text; }}
                 />
               </View>
+              <View style={styles.inputContainer}>
+                <Icon
+                  name="ios-checkmark"
+                  size={Constant.ICON_SIZE}
+                  color="#2B2E33"
+                />
+                <TextInput
+                  style={styles.input}
+                  ref='password'
+                  autoCapitalize='none'
+                  autoCorrect={false}
+                  placeholder='Confirm password'
+                  underlineColorAndroid={'rgba(0,0,0,0.0)'}
+                  placeholderTextColor="#2B2E33"
+                  secureTextEntry
+                  onChangeText={(text) => { this.confirmedPassword = text; }}
+                />
+              </View>
               <TouchableHighlight
                 style={styles.button}
                 underlayColor='#000000'
-                onPress={this.onLoginPressed.bind(this)}
+                onPress={this.onSignupPressed.bind(this)}
               >
-                <Text style={styles.btnText}>{LOGIN}</Text>
-              </TouchableHighlight>
-              <Text style={styles.hiperlink}>Forgot password</Text>
-              <TouchableHighlight
-                underlayColor='rgba(0,0,0,0.0)'
-                onPress={this.onSignupPressed.bind(this)}>
-                <Text style={styles.hiperlink}>Sign up</Text>
+                <Text style={styles.btnText}>{SIGNUP}</Text>
               </TouchableHighlight>
             </View>
           </View>
@@ -125,18 +180,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   titleContainer: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column'
+  },
+  inputsContainer: {
+    flex: 3
   },
   title: {
     fontFamily: 'OpenSans',
     fontSize: 35,
     color: '#2B2E33'
-  },
-  inputsContainer: {
-    flex: 3
   },
   inputContainer: {
     marginLeft: 20,
@@ -177,13 +232,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     width: deviceWidth / 4,
     height: deviceWidth / 4
-  },
-  hiperlink: {
-    fontSize: 14,
-    marginBottom: 5,
-    alignSelf: 'center',
-    color: '#0A2239'
   }
 });
 
-export default Login;
+export default Signup;

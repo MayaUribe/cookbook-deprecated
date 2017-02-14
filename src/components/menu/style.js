@@ -31,6 +31,7 @@ module.exports = StyleSheet({
   },
   menuTitle: {
     color: '#FFF',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    height: 25
   }
 });

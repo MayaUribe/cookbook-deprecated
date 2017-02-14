@@ -7,35 +7,50 @@ const {
   TouchableOpacity
 } = require('react-native');
 const { Component } = React;
-import Icon from 'react-native-vector-icons/Ionicons';
+import Octicons from 'react-native-vector-icons/Octicons';
 import Constant from './constants';
 import styles from './style';
-import Storage from '../../modules/storage';
+import * as firebase from 'firebase';
+import Database from '../../modules/firebase/database';
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      username: ''
-    };
-    this.getUsername();
-  }
-
   static propTypes = {
     onItemSelected: React.PropTypes.func.isRequired
   };
 
-  onItemSelected(item) {
-    this.props.onItemSelected(item);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      lastname: ''
+    };
   }
 
-  getUsername() {
-    Storage.getUserData().then((userData) => {
-      if (userData) {
-        this.setState({username: userData.username});
-      }
+  async componentDidMount() {
+    try {
+      let user = await firebase.auth().currentUser;
+      this.setUserData(user);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  setUserData(user) {
+    Database.listenUserData(user.uid, (name, lastname) => {
+      this.setState({
+        name: name,
+        lastname: lastname
+      });
     });
+
+    this.setState({
+      uid: user.uid
+    });
+  }
+
+  onItemSelected(item) {
+    this.props.onItemSelected(item);
   }
 
   render() {
@@ -43,12 +58,12 @@ class Menu extends Component {
       <ScrollView scrollsToTop={false} style={styles.menu}>
         <View>
           <Text style={styles.title}>
-            Welcome, <Text style={styles.username}>{this.state.username}</Text>
+            Welcome, <Text style={styles.username}>{this.state.name} {this.state.lastname}</Text>
           </Text>
         </View>
 
         <TouchableOpacity style={styles.optionMenu} onPress={() => this.onItemSelected(Constant.LOGOUT_LABEL)} >
-          <Icon name="ios-log-out" size={Constant.ICON_SIZE} color="#FFF" style={styles.menuIcon}/>
+          <Octicons name="sign-out" size={Constant.ICON_SIZE} color="#FFF" style={styles.menuIcon}/>
           <Text
             style={styles.menuTitle}>
             {Constant.LOGOUT_LABEL}

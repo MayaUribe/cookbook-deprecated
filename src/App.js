@@ -16,7 +16,7 @@ import {
 import * as firebase from 'firebase';
 import Login from './screens/login';
 import Recipes from './screens/recipes';
-import Home from './screens/recipes/home';
+import Signup from './screens/signup';
 import Firebase from './modules/firebase/firebase';
 
 import {
@@ -25,7 +25,7 @@ import {
   RECIPES,
   APP_NAME,
   LOADING,
-  HOME
+  SIGNUP
 } from './shared/constant';
 
 var deviceWidth = Dimensions.get('window').width;
@@ -70,8 +70,8 @@ class App extends Component {
       case RECIPES:
         ScreenComponent = Recipes;
         break;
-      case HOME:
-        ScreenComponent = Home;
+      case SIGNUP:
+        ScreenComponent = Signup;
         break;
     }
 

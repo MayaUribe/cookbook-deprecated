@@ -5,6 +5,7 @@ module.exports = {
   LOADING: 'Loading...',
   LOGIN: 'Login',
   LOGOUT: 'Logout',
+  SIGNUP: 'Signup',
 
   // Recipes
   RECIPES: 'Recipes',

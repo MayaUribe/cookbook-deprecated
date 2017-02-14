@@ -52,21 +52,13 @@
 		6C81915C1E3FFDA700207EEF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B2A3D54FDD4B74A2865C09 /* SystemConfiguration.framework */; };
 		6C81915D1E3FFDB100207EEF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195633256B504F689DABC2A7 /* AddressBook.framework */; };
 		6C81915E1E3FFDBD00207EEF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE81EEF92DD48618C458A32 /* libz.tbd */; };
-		6CD44C511E3E9DEC00561363 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C491E3E9DEC00561363 /* Entypo.ttf */; };
 		6CD44C521E3E9DEC00561363 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C491E3E9DEC00561363 /* Entypo.ttf */; };
-		6CD44C531E3E9DEC00561363 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4A1E3E9DEC00561363 /* EvilIcons.ttf */; };
 		6CD44C541E3E9DEC00561363 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4A1E3E9DEC00561363 /* EvilIcons.ttf */; };
-		6CD44C551E3E9DEC00561363 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4B1E3E9DEC00561363 /* FontAwesome.ttf */; };
 		6CD44C561E3E9DEC00561363 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4B1E3E9DEC00561363 /* FontAwesome.ttf */; };
-		6CD44C571E3E9DEC00561363 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4C1E3E9DEC00561363 /* Foundation.ttf */; };
 		6CD44C581E3E9DEC00561363 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4C1E3E9DEC00561363 /* Foundation.ttf */; };
-		6CD44C591E3E9DEC00561363 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4D1E3E9DEC00561363 /* Ionicons.ttf */; };
 		6CD44C5A1E3E9DEC00561363 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4D1E3E9DEC00561363 /* Ionicons.ttf */; };
-		6CD44C5B1E3E9DEC00561363 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4E1E3E9DEC00561363 /* MaterialIcons.ttf */; };
 		6CD44C5C1E3E9DEC00561363 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4E1E3E9DEC00561363 /* MaterialIcons.ttf */; };
-		6CD44C5D1E3E9DEC00561363 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4F1E3E9DEC00561363 /* Octicons.ttf */; };
 		6CD44C5E1E3E9DEC00561363 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C4F1E3E9DEC00561363 /* Octicons.ttf */; };
-		6CD44C5F1E3E9DEC00561363 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C501E3E9DEC00561363 /* Zocial.ttf */; };
 		6CD44C601E3E9DEC00561363 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD44C501E3E9DEC00561363 /* Zocial.ttf */; };
 		77372896D60448E1AA22E7D8 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAD0F7101F149BBBB9B2AA3 /* libRNVectorIcons.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -993,23 +985,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CD44C591E3E9DEC00561363 /* Ionicons.ttf in Resources */,
 				6C4FF2C61E3C351D005029D3 /* OpenSans-Semibold.ttf in Resources */,
-				6CD44C571E3E9DEC00561363 /* Foundation.ttf in Resources */,
-				6CD44C511E3E9DEC00561363 /* Entypo.ttf in Resources */,
 				6C4FF2C81E3C351D005029D3 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				6CD44C531E3E9DEC00561363 /* EvilIcons.ttf in Resources */,
 				6C4FF2C41E3C351D005029D3 /* OpenSans-Regular.ttf in Resources */,
 				6C4FF2BE1E3C351D005029D3 /* OpenSans-Italic.ttf in Resources */,
 				6C4FF2BC1E3C351D005029D3 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
-				6CD44C5D1E3E9DEC00561363 /* Octicons.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				6C4FF2C21E3C351D005029D3 /* OpenSans-LightItalic.ttf in Resources */,
 				6C4FF2B61E3C351D005029D3 /* OpenSans-Bold.ttf in Resources */,
-				6CD44C551E3E9DEC00561363 /* FontAwesome.ttf in Resources */,
-				6CD44C5F1E3E9DEC00561363 /* Zocial.ttf in Resources */,
-				6CD44C5B1E3E9DEC00561363 /* MaterialIcons.ttf in Resources */,
 				6C4FF2C01E3C351D005029D3 /* OpenSans-Light.ttf in Resources */,
 				6C4FF2B81E3C351D005029D3 /* OpenSans-BoldItalic.ttf in Resources */,
 				6C4FF2BA1E3C351D005029D3 /* OpenSans-ExtraBold.ttf in Resources */,

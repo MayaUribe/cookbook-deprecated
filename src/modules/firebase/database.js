@@ -5,14 +5,16 @@ class Database {
   /**
    * Sets a users mobile number
    * @param userId
-   * @param mobile
+   * @param name
+   * @param lastname
    * @returns {firebase.Promise<any>|!firebase.Promise.<void>}
    */
-  static setUserMobile(userId, mobile) {
-    let userMobilePath = '/user/' + userId + '/details';
+  static setUserName(userId, name, lastname) {
+    let userPath = '/user/' + userId + '/details';
 
-    return firebase.database().ref(userMobilePath).set({
-      mobile: mobile
+    return firebase.database().ref(userPath).set({
+      name: name,
+      lastname: lastname
     });
   }
 
@@ -21,17 +23,19 @@ class Database {
    * @param userId
    * @param callback Users mobile number
    */
-  static listenUserMobile(userId, callback) {
-    let userMobilePath = '/user/' + userId + '/details';
+  static listenUserData(userId, callback) {
+    let userPath = '/user/' + userId + '/details';
 
-    firebase.database().ref(userMobilePath).on('value', (snapshot) => {
-      var mobile = '';
+    firebase.database().ref(userPath).on('value', (snapshot) => {
+      var name = '';
+      var lastname = '';
 
       if (snapshot.val()) {
-        mobile = snapshot.val().mobile;
+        name = snapshot.val().name;
+        lastname = snapshot.val().lastname;
       }
 
-      callback(mobile);
+      callback(name, lastname);
     });
   }
 }
