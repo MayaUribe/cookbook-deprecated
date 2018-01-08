@@ -57,7 +57,7 @@ class Recipes extends Component {
                        icon="md-menu"
                        onPress={() => this.toggleMenu()}/>
           <View style={styles.containers}>
-            <Text>Hello World!, here are my recipes!</Text>
+            <Text>Welcome!, here are my recipes!</Text>
           </View>
         </View>
       </SideMenu>
