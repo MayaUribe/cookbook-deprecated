@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import ScreenTitle from '../../components/screen-title';
-const SideMenu = require('react-native-side-menu');
+import SideMenu from 'react-native-side-menu';
 import Menu from '../../components/menu';
 
 import {
@@ -48,6 +48,7 @@ class Recipes extends Component {
 
     return (
       <SideMenu
+        ref="rootSidebarMenu"
         menu={menu}
         isOpen={this.state.isOpen}
         onChange={(isOpen) => this.updateMenu(isOpen)}>

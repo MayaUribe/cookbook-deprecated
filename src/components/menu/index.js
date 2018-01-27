@@ -9,13 +9,15 @@ const {
 const { Component } = React;
 import Octicons from 'react-native-vector-icons/Octicons';
 import Constant from './constants';
+import {
+  LOGIN,
+} from '../../shared/constant';
 import styles from './style';
 import * as firebase from 'firebase';
 import Database from '../../modules/firebase/database';
 
 class Menu extends Component {
   static propTypes = {
-    onItemSelected: React.PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -49,8 +51,23 @@ class Menu extends Component {
     });
   }
 
+  _navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
+
+  async logout() {
+    try {
+      await firebase.auth().signOut();
+
+      // Navigate to login view
+      this._navigateTo(LOGIN)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   onItemSelected(item) {
-    this.props.onItemSelected(item);
+    this.logout();
   }
 
   render() {

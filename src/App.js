@@ -2,10 +2,10 @@
  * React Native Webpack Starter Kit
  * https://github.com/jhabdas/react-native-webpack-starter-kit
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { StackNavigator } from 'react-navigation';
 import {
   StatusBar,
-  Navigator,
   View,
   Text,
   Image,
@@ -28,7 +28,21 @@ import {
   SIGNUP
 } from './shared/constant';
 
-var deviceWidth = Dimensions.get('window').width;
+let deviceWidth = Dimensions.get('window').width;
+
+const StackNavigation = StackNavigator({
+  Login: {
+    screen: Login,
+  },
+  Recipes: {
+    path: 'recipes/:name',
+    screen: Recipes,
+  },
+  Signup: {
+    screen: Signup,
+  },
+});
+
 
 class App extends Component {
 
@@ -85,9 +99,7 @@ class App extends Component {
       await firebase.auth().signOut();
 
       // Navigate to login view
-      this.navigator.push({
-        name: LOGIN
-      });
+      this.props.navigation.navigate(LOGIN);
     } catch (error) {
       console.log(error);
     }
@@ -106,11 +118,12 @@ class App extends Component {
 
     if (this.state.initialView) {
       content = (
-        <View style={{ flex: 1 }}>
+        <View style={styles.flexOne}>
           <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
-          <Navigator style={{ flex: 1 }}
-                     initialRoute={{ name: this.state.initialView }}
-                     renderScene={this.renderScene.bind(this)} />
+          <StackNavigation
+            screenProps='test'
+            onMenuItemSelected={this.onMenuItemSelected.bind(this)}
+          />
         </View>
       );
     } else {
@@ -129,7 +142,10 @@ class App extends Component {
   }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
+  flexOne: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: '#8E6C88'

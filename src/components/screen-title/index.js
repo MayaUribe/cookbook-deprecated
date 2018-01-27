@@ -33,8 +33,6 @@ class ScreenTitle extends Component {
 }
 
 ScreenTitle.propTypes = {
-  onPress: React.PropTypes.func,
-  title: React.PropTypes.string
 };
 
 export default ScreenTitle;

@@ -24,9 +24,7 @@ class Login extends Component {
   }
 
   _navigate(screen) {
-    this.props.navigator.push({
-      name: screen
-    });
+    this.props.navigation.navigate(screen, {name: 'Test'});
   }
 
   async login(email, pass) {
