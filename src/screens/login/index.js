@@ -13,12 +13,12 @@ import {
   SIGNUP
 } from '../../shared/constant';
 
-var deviceWidth = Dimensions.get('window').width;
+let deviceWidth = Dimensions.get('window').width;
 
 class Login extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.inputedEmail = '';
     this.inputedPassword = '';
   }

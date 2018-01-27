@@ -12,56 +12,26 @@ import {
 } from '../../shared/constant';
 
 class Recipes extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    /*title: `My Recipes ${navigation.state.params.name}`,*/
+    title: `My Recipes huhu`,
+  });
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       isOpen: false
     };
   }
 
-  _navigate(name) {
-    this.props.navigator.pop({
-      name: RECIPES,
-      passProps: {
-        name: name
-      }
-    });
-  }
-
-  updateMenu(isOpen) {
-    this.setState({isOpen: isOpen});
-  }
-
-  toggleMenu() {
-    this.setState({isOpen: !this.state.isOpen});
-  }
-
-  onMenuItemSelected(item) {
-    this.props.onMenuItemSelected(item);
-    this.updateMenu(false);
-  }
-
   render() {
-    const menu = <Menu onItemSelected={this.onMenuItemSelected.bind(this)} />;
-
     return (
-      <SideMenu
-        ref="rootSidebarMenu"
-        menu={menu}
-        isOpen={this.state.isOpen}
-        onChange={(isOpen) => this.updateMenu(isOpen)}>
-        <View style={styles.container}>
-          <ScreenTitle style={styles.toolbar}
-                       title={MY_RECIPES}
-                       icon="md-menu"
-                       onPress={() => this.toggleMenu()}/>
-          <View style={styles.containers}>
-            <Text>Welcome!, here are my recipes!</Text>
-          </View>
+      <View style={styles.container}>
+        <View style={styles.containers}>
+          <Text>Welcome!, here are my recipes!</Text>
         </View>
-      </SideMenu>
+      </View>
     );
   }
 }

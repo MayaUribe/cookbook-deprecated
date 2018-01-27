@@ -3,7 +3,7 @@
  * https://github.com/jhabdas/react-native-webpack-starter-kit
  */
 import React, { Component } from 'react';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import {
   StatusBar,
   View,
@@ -14,84 +14,79 @@ import {
 } from 'react-native';
 
 import * as firebase from 'firebase';
-import Login from './screens/login';
-import Recipes from './screens/recipes';
-import Signup from './screens/signup';
+import LoginScreen from './screens/login';
+import LogoutScreen from './screens/logout';
+import RecipesScreen from './screens/recipes';
+import SignupScreen from './screens/signup';
 import Firebase from './modules/firebase/firebase';
 
 import {
   LOGIN,
   LOGOUT,
-  RECIPES,
   APP_NAME,
   LOADING,
-  SIGNUP
 } from './shared/constant';
 
 let deviceWidth = Dimensions.get('window').width;
 
-const StackNavigation = StackNavigator({
-  Login: {
-    screen: Login,
-  },
+// drawer stack
+const DrawerStack = DrawerNavigator({
   Recipes: {
     path: 'recipes/:name',
-    screen: Recipes,
+    screen: RecipesScreen,
   },
-  Signup: {
-    screen: Signup,
+  Signout: {
+    title: 'Logout',
+    screen: LogoutScreen,
   },
 });
 
+const DrawerNavigation = StackNavigator({
+  DrawerStack: { screen: DrawerStack }
+}, {
+  headerMode: 'float',
+  navigationOptions: ({navigation}) => ({
+    headerStyle: {
+      backgroundColor: '#009999'
+    },
+    title: 'My Recipes',
+    headerTintColor: 'white',
+  })
+});
+
+// login stack
+const LoginStack = StackNavigator({
+  Login: { screen: LoginScreen },
+  Signup: { screen: SignupScreen },
+  /* forgottenPasswordScreen: { screen: ForgottenPasswordScreen, navigationOptions: { title: 'Forgot Password' } }*/
+}, {
+  headerMode: 'none',
+});
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     Firebase.initialise();
     this.getInitialView();
     this.navigator = null;
 
     this.state = {
-      userLoaded: false,
-      initialView: null
+      loading: true,
     };
 
-    this.renderScene = this.renderScene.bind(this);
     this.getInitialView = this.getInitialView.bind(this);
   }
 
   getInitialView() {
     firebase.auth().onAuthStateChanged((user) => {
-      let initialView = user ? RECIPES : LOGIN;
-
-      this.setState({
-        userLoaded: true,
-        initialView: initialView
-      });
+      if (user) {
+        this.setState({ loading: false, authenticated: true });
+      } else {
+        this.setState({ loading: false, authenticated: false });
+      }
     });
-  }
-
-  renderScene(route, navigator) {
-    let ScreenComponent = null;
-    this.navigator = navigator;
-
-    switch (route.name) {
-      case LOGIN:
-        ScreenComponent = Login;
-        break;
-      case RECIPES:
-        ScreenComponent = Recipes;
-        break;
-      case SIGNUP:
-        ScreenComponent = Signup;
-        break;
-    }
-
-    if (ScreenComponent) {
-      return <ScreenComponent navigator={navigator} onMenuItemSelected={this.onMenuItemSelected.bind(this)} {...route.passProps} />;
-    }
   }
 
   async logout() {
@@ -114,31 +109,41 @@ class App extends Component {
   }
 
   render() {
-    let content;
+    if (this.state.loading) {
+      return (
+        <View style={styles.container}>
+          <View style={styles.content}>
+            <Image source={require('./assets/img/cookbook_512.png')}
+                   style={styles.logo} />
+            <Text style={styles.appText}>{APP_NAME}</Text>
+            <Text style={styles.loadingText}>{LOADING}</Text>
+          </View>
+        </View>
+      )
+    }
 
-    if (this.state.initialView) {
-      content = (
+    if (!this.state.authenticated) {
+      return (
         <View style={styles.flexOne}>
-          <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
-          <StackNavigation
-            screenProps='test'
-            onMenuItemSelected={this.onMenuItemSelected.bind(this)}
-          />
+          <View style={styles.flexOne}>
+            <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
+            <LoginStack />
+          </View>
         </View>
       );
     } else {
-      content = (<View style={styles.container}>
-                   <View style={styles.content}>
-                     <Image source={require('./assets/img/cookbook_512.png')}
-                            style={styles.logo} />
-                     <Text style={styles.appText}>{APP_NAME}</Text>
-                     <Text style={styles.loadingText}>{LOADING}</Text>
-                   </View>
-                 </View>);
+      return (
+        <View style={styles.flexOne}>
+          <View style={styles.flexOne}>
+            <StatusBar backgroundColor="#262a2e" barStyle="light-content" />
+            <DrawerNavigation
+              screenProps='test'
+              onMenuItemSelected={this.onMenuItemSelected.bind(this)}
+            />
+          </View>
+        </View>
+      );
     }
-    return (
-      content
-    );
   }
 }
 
