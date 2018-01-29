@@ -26,6 +26,8 @@ import {
   APP_NAME,
   LOADING,
 } from './shared/constant';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Constant from './components/screen-title/constants';
 
 let deviceWidth = Dimensions.get('window').width;
 
@@ -46,6 +48,9 @@ const DrawerNavigation = StackNavigator({
 }, {
   headerMode: 'float',
   navigationOptions: ({navigation}) => ({
+    headerLeft: <Text onPress={() => navigation.navigate('DrawerOpen')} style={styles.icon}>
+      <Icon name={'md-menu'} size={Constant.ICON_SIZE} color="#FFF" />
+    </Text>,
     headerStyle: {
       backgroundColor: '#009999'
     },
@@ -175,6 +180,9 @@ const styles = StyleSheet.create({
     fontFamily: 'OpenSans',
     fontSize: 16,
     color: '#FFF'
+  },
+  icon: {
+    marginLeft: 10,
   }
 });
 

@@ -9,6 +9,10 @@ import {
 } from '../../shared/constant';
 
 class Logout extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: `Logout`,
+  });
+
   componentDidMount() {
     this.getInitialView();
   }
